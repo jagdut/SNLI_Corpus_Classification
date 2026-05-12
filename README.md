@@ -8,7 +8,7 @@ Projekt polegał na klasyfikacji pary zdań — przesłanki oraz hipotezy — do
 * **neutral** (neutralność): drugie zdanie jest neutralne wobec pierwszego.
 
 ## Dane (SNLI Corpus)
-Dane pobrano z korpusu SNLI (Stanford Natural Language Inference). Są to dane napisane przez ludzi i także przez nich sklasyfikowane. Każdy rekord w tych danych składa się z dwóch części- zdania przesłanki a następnie zdania hipotezy. Każdemu rekordowi jest przypisany charakter relacji między tymi zdaniami (entailment, contradiction lub neutral). Charakter każdej z pary zdań został określony przez ludzi i każda para dostała 5 głosów. Wśród danych występuje kolumna „gold_label” która określa która kategoria była dominantą dla danej pary (w przypadku braku dominanty, przypisany jest znak „-”). Rekordy o przypisanym gold_label „-” usunięto i nie brano ich pod uwagę podczas wykonywania zadania.
+Dane pobrano z korpusu SNLI (Stanford Natural Language Inference - https://nlp.stanford.edu/projects/snli/). Są to dane napisane przez ludzi i także przez nich sklasyfikowane. Każdy rekord w tych danych składa się z dwóch części- zdania przesłanki a następnie zdania hipotezy. Każdemu rekordowi jest przypisany charakter relacji między tymi zdaniami (entailment, contradiction lub neutral). Charakter każdej z pary zdań został określony przez ludzi i każda para dostała 5 głosów. Wśród danych występuje kolumna „gold_label” która określa która kategoria była dominantą dla danej pary (w przypadku braku dominanty, przypisany jest znak „-”). Rekordy o przypisanym gold_label „-” usunięto i nie brano ich pod uwagę podczas wykonywania zadania.
 
 
 ### Liczność zbiorów danych
