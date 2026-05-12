@@ -3,9 +3,9 @@ Projekt dotyczący klasyfikacji par zdań pod kątem ich relacji logicznej.
 
 ## Opis projektu
 Projekt polegał na klasyfikacji pary zdań — **przesłanki** oraz **hipotezy** — do jednej z trzech kategorii:
-* **Entailment** (wynikanie): drugie zdanie jest konsekwencją pierwszego[cite: 7].
-* **Contradiction** (sprzeczność): drugie zdanie jest zaprzeczeniem pierwszego[cite: 7].
-* **Neutral** (neutralność): drugie zdanie jest neutralne wobec pierwszego[cite: 7].
+* **Entailment** (wynikanie): drugie zdanie jest konsekwencją pierwszego.
+* **Contradiction** (sprzeczność): drugie zdanie jest zaprzeczeniem pierwszego.
+* **Neutral** (neutralność): drugie zdanie jest neutralne wobec pierwszego.
 
 ## Dane (SNLI Corpus)
 Dane pobrano z korpusu SNLI (Stanford Natural Language Inference). Są to dane napisane przez ludzi i także przez nich sklasyfikowane. Każdy rekord w tych danych składa się z dwóch części- zdania przesłanki a następnie zdania hipotezy. Każdemu rekordowi jest przypisany charakter relacji między tymi zdaniami tj. czy drugie jest konsekwencją pierwszego (entailment), czy drugie jest zaprzeczeniem pierwszego (contradiction) oraz czy drugie jest neutralne wobec pierwszego (neutral). Charakter każdej z pary zdań został określony przez ludzi i każda para dostała 5 głosów. Wśród danych występuje kolumna „gold_label” która określa która kategoria była dominantą dla danej pary (w przypadku braku dominanty, przypisany jest znak „-”). Rekordy o przypisanym gold_label „-” usunięto i nie brano ich pod uwagę podczas wykonywania zadania.
