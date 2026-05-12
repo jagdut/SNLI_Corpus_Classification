@@ -8,7 +8,7 @@ Projekt polegał na klasyfikacji pary zdań — **przesłanki** oraz **hipotezy*
 * **Neutral** (neutralność): drugie zdanie jest neutralne wobec pierwszego.
 
 ## Dane (SNLI Corpus)
-Dane pobrano z korpusu SNLI (Stanford Natural Language Inference). Są to dane napisane przez ludzi i także przez nich sklasyfikowane. Każdy rekord w tych danych składa się z dwóch części- zdania przesłanki a następnie zdania hipotezy. Każdemu rekordowi jest przypisany charakter relacji między tymi zdaniami tj. czy drugie jest konsekwencją pierwszego (entailment), czy drugie jest zaprzeczeniem pierwszego (contradiction) oraz czy drugie jest neutralne wobec pierwszego (neutral). Charakter każdej z pary zdań został określony przez ludzi i każda para dostała 5 głosów. Wśród danych występuje kolumna „gold_label” która określa która kategoria była dominantą dla danej pary (w przypadku braku dominanty, przypisany jest znak „-”). Rekordy o przypisanym gold_label „-” usunięto i nie brano ich pod uwagę podczas wykonywania zadania.
+Dane pobrano z korpusu SNLI (Stanford Natural Language Inference). Są to dane napisane przez ludzi i także przez nich sklasyfikowane. Każdy rekord w tych danych składa się z dwóch części- zdania przesłanki a następnie zdania hipotezy. Każdemu rekordowi jest przypisany charakter relacji między tymi zdaniami (entailment, contradiction lub neutral). Charakter każdej z pary zdań został określony przez ludzi i każda para dostała 5 głosów. Wśród danych występuje kolumna „gold_label” która określa która kategoria była dominantą dla danej pary (w przypadku braku dominanty, przypisany jest znak „-”). Rekordy o przypisanym gold_label „-” usunięto i nie brano ich pod uwagę podczas wykonywania zadania.
 
 
 ### Liczność zbiorów danych
@@ -39,14 +39,16 @@ Model uzyskał **80%** dokładności (accuracy) na zbiorze testowym.
 
 | Klasa | Precision | Recall | F1-score | Support |
 | :--- | :--- | :--- | :--- | :--- |
-| **Entailment** | 0.79 | 0.86 | 0.82 | 3 368 |
-| **Contradiction** | 0.83 | 0.80 | 0.82 | 3 237 |
-| **Neutral** | 0.78 | 0.73 | 0.75 | 3 219 |
-| **Accuracy** | | | **0.80** | **9 824** |
+| **entailment** | 0.79 | 0.86 | 0.82 | 3 368 |
+| **contradiction** | 0.83 | 0.80 | 0.82 | 3 237 |
+| **neutral** | 0.78 | 0.73 | 0.75 | 3 219 |
+| **accuracy** | | | **0.80** | **9 824** |
+| **macro avg** | 0.80 | 0.80 | 0.80 | 9824 |
+| **weighted avg** | 0.80 | 0.80 | 0.80 | 9824 |
 
 ## Przykłady pary zdań do testowania najlepszego modelu
-> **Przesłanka:** *I do not like jazz.* > **Hipoteza:** *When I was younger I used to sleep longer.* > **Predykcja:** **Contradiction** $\rightarrow$ **NIEPOPRAWNE**
-> **Przesłanka:** *You look hungry.* > **Hipoteza:** *You should eat something.* > **Predykcja:** **Entailment** $\rightarrow$ **POPRAWNE**
-> **Przesłanka:** *Gardening is what makes me happy.* > **Hipoteza:** *All those trees and flowers, I hate them.* > **Predykcja:** **Contradiction**  $\rightarrow$ **POPRAWNE**
+* **Przesłanka:** *I do not like jazz.* > **Hipoteza:** *When I was younger I used to sleep longer.* > **Predykcja:** **Contradiction** $\rightarrow$ **NIEPOPRAWNE**
+* **Przesłanka:** *You look hungry.* > **Hipoteza:** *You should eat something.* > **Predykcja:** **Entailment** $\rightarrow$ **POPRAWNE**
+* **Przesłanka:** *Gardening is what makes me happy.* > **Hipoteza:** *All those trees and flowers, I hate them.* > **Predykcja:** **Contradiction**  $\rightarrow$ **POPRAWNE**
 
 **Wykorzystane technologie:** PyTorch, Torchtext, Python, Jupyter Notebook, Google Colab.
