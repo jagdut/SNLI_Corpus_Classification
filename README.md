@@ -1,1 +1,1 @@
-# SNLI_Corpus_Classification
+# SNLI Corpus Classification
