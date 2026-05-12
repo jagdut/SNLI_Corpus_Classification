@@ -1,4 +1,4 @@
-# SNLI Corpus Classification using SNLI Dataset
+# Natural Language Inference (NLI) with BiLSTM and SNLI Dataset
 Projekt dotyczący klasyfikacji par zdań pod kątem ich relacji logicznej.
 
 ## Opis projektu
